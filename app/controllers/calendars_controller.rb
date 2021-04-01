@@ -2,7 +2,7 @@ class CalendarsController < ApplicationController
 
   # １週間のカレンダーと予定が表示されるページ
   def index
-    getWeek
+    get_week
     @plan = Plan.new
   end
 
@@ -46,4 +46,3 @@ class CalendarsController < ApplicationController
       days = { month: (@todays_date + x).month, date: (@todays_date + x).day, plans: today_plans, wday: (@todays_date + x) + 1}
     end
   end
-end
